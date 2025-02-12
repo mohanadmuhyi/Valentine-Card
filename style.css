@@ -136,27 +136,33 @@ span img {
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 400px) {
     .container {
-        width: 600px;
+        width: 300px;
     }
 
     .text {
-        font-size: 30px;
+        font-size: 17px;
     }
 
     .yes-emoji {
-        left: 84px;
-        bottom: 203px;
+        left: 43px;
+        bottom: 204px;
     }
 
     .no-emoji {
-        right: 84px;
-        bottom: 203px;
+        right: 43px;
+        bottom: 204px;
     }
 
     span img {
-        width: 55px;
+        width: 30px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 75px;
+        font-size: 17px;
     }
 
 }
