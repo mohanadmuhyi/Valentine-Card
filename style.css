@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-family: "Kanit", serif;
+}
+
+body {
+    background-color: #D8BFD8;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 400px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: space-evenly;
+    position: relative;
+    animation-name: change-color;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 200px;
+    height: 100px;
+    text-decoration: none;
+    color: black;
+}
+
+.yes {
+    background-color: green;
+    margin-right: 10px;
+    z-index: 1;
+}
+
+.no {
+    background-color: darkred;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+span img {
+    width: 65px;
+}
+
+.yes-emoji {
+    position: absolute;
+    left: 275px;
+    bottom: 196px;
+    transform: rotate(-20deg);
+    display: none;
+}
+
+.no-emoji {
+    position: absolute;
+    right: 275px;
+    bottom: 196px;
+    transform: rotate(20deg);
+    display: none;
+}
+
+.yes:hover+.yes-emoji {
+    display: initial;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.no:hover+.no-emoji {
+    display: initial;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes change-color {
+    0% {
+        background-color: #B22222;
+    }
+
+    25% {
+        background-color: #7C0A02;
+
+    }
+
+    50% {
+        background-color: #800000;
+    }
+
+    75% {
+        background-color: #A52A2A;
+    }
+
+    100% {
+        background-color: #8B3A3A;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 600px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    .yes-emoji {
+        left: 84px;
+        bottom: 203px;
+    }
+
+    .no-emoji {
+        right: 84px;
+        bottom: 203px;
+    }
+
+    span img {
+        width: 55px;
+    }
+
+}
