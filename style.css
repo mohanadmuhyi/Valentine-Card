@@ -136,7 +136,7 @@ span img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .container {
         width: 600px;
     }
